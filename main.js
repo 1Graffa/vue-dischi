@@ -35,7 +35,8 @@ var app = new Vue({
   //     } else{
   // this.member = member.filter(function (e){ return e.gender == val;})
   methods:{
-    filtraGeneri(){
+    filtraGeneri: function(evt){
+      var val = evt.target.value;
       if (val == "All"){
         this.generi = generi;
       }else{
