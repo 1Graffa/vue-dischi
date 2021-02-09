@@ -19,7 +19,8 @@
         <div id="app" class="cds-container container">
             <!-- select con filtro-->
             <div class="select">
-              <select v-on:change="filtraGeneri">
+              <select >
+                <!-- v-on:change="filtraGeneri" -->
                 <option v-for="genere in generi" :value="genere">{{ genere }}</option>
               </select>
             </div>

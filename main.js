@@ -29,19 +29,4 @@ var app = new Vue({
       // messaggio di errore
       .catch(error => console.log('errore'));
   },
-
-  // if (val == 'all') {
-  //  this.member = member;
-  //     } else{
-  // this.member = member.filter(function (e){ return e.gender == val;})
-  methods:{
-    filtraGeneri: function(evt){
-      var val = evt.target.value;
-      if (val == "All"){
-        this.generi = generi;
-      }else{
-        this.generi = generi.filter(function (e) {return e.genre == val;})
-      }
-    }
-  }
 });
