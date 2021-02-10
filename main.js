@@ -1,8 +1,9 @@
 var app = new Vue({
   el: '#app',
   data: {
+    dischi: [],
     generi: ["All"],
-    dischi: []
+    genereSelect: "All"
   },
   //PROMEMORIA
   // author: (...)
@@ -14,13 +15,13 @@ var app = new Vue({
     axios
       .get('https://flynn.boolean.careers/exercises/api/array/music')
       .then((result) => {
-       console.log(result);
+       // console.log(result);
         // in dischi mettiamo tutto il contenuto del richiamo
         this.dischi = result.data.response;
         // console.log(this.dischi);
 
         this.dischi.forEach((element,i) => {
-          console.log(element);
+          // console.log(element);
           if(!this.generi.includes(element.genre)){
             this.generi.push(element.genre);
           }

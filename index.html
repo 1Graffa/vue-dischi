@@ -19,13 +19,13 @@
         <div id="app" class="cds-container container">
             <!-- select con filtro-->
             <div class="select">
-              <select >
-                <!-- v-on:change="filtraGeneri" -->
+              <select v-model="genereSelect">
+                <!-- //occhio al triangolo da fare con genereSelect tra v-model,js e v-for -->
                 <option v-for="genere in generi" :value="genere">{{ genere }}</option>
               </select>
             </div>
             <!-- Div struttura disco -->
-            <div class="cd" v-for="disco in dischi">
+            <div class="cd" v-for="disco in dischi" v-if="genereSelect == 'All' || genereSelect == disco.genre">
               <img :src="disco.poster">
               <h3>{{ disco.title }}</h3>
               <span class="author">{{ disco.author }}</span>
